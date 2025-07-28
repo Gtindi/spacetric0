@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Energy Solutions | SPACETRIC - Advanced Solar & Power Systems</title>
+<meta name="description" content="Comprehensive energy solutions including solar power systems, energy storage, smart grids, and renewable energy infrastructure for sustainable power generation in Tanzania."/>
+<meta name="robots" content="follow, index"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #00a86b;
+    --accent-color: #ff6b35;
+    --dark-color: #1a1a1a;
+    --light-color: #f8f9fa;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --success-color: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 102, 204, 0.8), rgba(0, 168, 107, 0.6)), url('https://images.unsplash.com/photo-1615232714706-6b3adc67138b') center/cover no-repeat;
+    padding: 5rem 0;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero .highlight {
+    color: #9DFF20;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e55a30;
+    transform: translateY(-2px);
+}
+
+/* Content Sections */
+.section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    background: var(--light-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-header .highlight {
+    color: var(--primary-color);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.content-text h3 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.feature-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.feature-list li::before {
+    content: "⚡";
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.content-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.content-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-card h4 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Call to Action */
+.cta-section {
+    background: var(--dark-color);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+    background: var(--light-color);
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../main-pages/index.html" class="logo">SPACETRIC</a>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#energy">Energy</a></li>
+                        <li><a href="../water/water-solutions.html">Water</a></li>
+                        <li><a href="../security/security-solutions.html">Security</a></li>
+                        <li><a href="../telecom/telecom-solutions.html">Telecom</a></li>
+                        <li><a href="../about/about.html">About</a></li>
+                        <li><a href="../contact/contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Advanced <span class="highlight">Energy Solutions</span></h1>
+            <p>Powering Tanzania's future with sustainable solar energy systems, smart grid technologies, and innovative power storage solutions for residential, commercial, and industrial applications.</p>
+            <a href="#contact" class="cta-button">
+                Get Energy Assessment
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Solar Power Systems -->
+    <section class="section">
+        <div class="container">
+            <div class="two-column">
+                <div class="content-text">
+                    <h3>Solar Power Systems</h3>
+                    <p>Our comprehensive solar solutions deliver reliable, clean energy that reduces costs and environmental impact. We design and install systems tailored to your specific energy needs and consumption patterns.</p>
+                    <ul class="feature-list">
+                        <li>High-efficiency photovoltaic panels</li>
+                        <li>Advanced inverter technology</li>
+                        <li>Smart monitoring systems</li>
+                        <li>Grid-tied and off-grid solutions</li>
+                        <li>Professional installation and commissioning</li>
+                        <li>Performance warranty and maintenance</li>
+                    </ul>
+                </div>
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1615630859219-0459703c34e6" alt="Solar Power Installation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Storage -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="two-column">
+                <div class="content-image">
+                    <img src="https://images.unsplash.com/photo-1693680204133-5711f0a74465" alt="Energy Storage Systems">
+                </div>
+                <div class="content-text">
+                    <h3>Energy Storage Solutions</h3>
+                    <p>Advanced battery storage systems that store excess solar energy for use when the sun isn't shining. Our solutions ensure continuous power supply and maximum energy independence.</p>
+                    <ul class="feature-list">
+                        <li>Lithium-ion battery technology</li>
+                        <li>Scalable modular design</li>
+                        <li>Intelligent energy management</li>
+                        <li>Backup power capabilities</li>
+                        <li>Remote monitoring and control</li>
+                        <li>Long-term reliability guarantee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Energy Services -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive <span class="highlight">Energy Services</span></h2>
+                <p>From initial consultation to ongoing maintenance, we provide complete energy solution services that ensure optimal performance and maximum return on investment.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h4>Energy Auditing</h4>
+                    <p>Comprehensive analysis of your current energy consumption patterns and identification of opportunities for efficiency improvements and cost savings.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h4>System Design</h4>
+                    <p>Custom engineering and design of optimal energy solutions based on your specific requirements, site conditions, and energy goals.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h4>Professional Installation</h4>
+                    <p>Expert installation by certified technicians ensuring proper setup, safety compliance, and optimal system performance from day one.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h4>Performance Monitoring</h4>
+                    <p>Real-time system monitoring and performance analytics to ensure maximum efficiency and early detection of any issues.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h4>Maintenance & Support</h4>
+                    <p>Regular maintenance services and technical support to keep your energy systems operating at peak performance for years to come.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h4>System Upgrades</h4>
+                    <p>Future-ready solutions with upgrade pathways to expand capacity and incorporate new technologies as your energy needs evolve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose <span class="highlight">Spacetric Energy</span></h2>
+                <p>Experience the advantages of working with Tanzania's leading energy solution provider.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h4>Cost Savings</h4>
+                    <p>Reduce electricity bills by up to 90% with our efficient solar systems and energy storage solutions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌱</div>
+                    <h4>Environmental Impact</h4>
+                    <p>Reduce your carbon footprint and contribute to a sustainable future with clean renewable energy.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h4>Energy Independence</h4>
+                    <p>Achieve energy security and independence from grid outages with reliable backup power systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Energy Future?</h2>
+            <p>Contact our energy experts today for a free consultation and customized energy solution proposal.</p>
+            <a href="#contact" class="btn-white">
+                Schedule Consultation
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
