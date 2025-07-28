@@ -1,0 +1,8 @@
+/* File: automatic-gutenberg.css - Version: 3.2.7 - Generated: 2024-12-14 08:56:32 */
+:root {
+  --wp-page-block-width: 100%;
+  --wp-post-block-width: 767px;
+}
+.editor-styles-wrapper {
+  width: 100% !important;
+}
